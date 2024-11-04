@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.sec {
+    background: brown;
+    padding: 20px 0;
+    /* Add some vertical padding */
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    /* Change to column layout */
+    align-items: center;
+    background: white;
+    transition: 0.5s;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Henny Penny;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* Move background color here */
+}
+
+header ul {
+    display: flex;
+    position: relative;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Slider Container */
+
+.slider-container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    /* Ensure full width on smaller screens */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 120px;
+}
+
+
+/* Slider */
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+
+/* Individual Slide */
+
+.slide {
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Navigation Buttons */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Description Section */
+
+.description {
+    padding: 20px;
+    margin-top: 120px;
+    text-align: center;
+    background: blanchedalmond;
+    width: 1500px;
+    border-radius: 120px;
+    opacity: 0.9;
+}
+
+.description h1 {
+    font-size: 2em;
+    /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 24px;
+    font-family: Calibri, sans-serif;
+    line-height: 1.6;
+    /* Improve readability */
+    margin-bottom: 15px;
+}
+
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header ul {
+        flex-direction: column;
+    }
+    header ul li a {
+        margin: 10px 0;
+    }
+    .sec {
+        padding: 50px 10px;
+    }
+    .slider-container,
+    .description {
+        max-width: 100%;
+    }
+    .slide {
+        height: auto;
+    }
+}
+
+footer {
+    background:black;
+    color: white; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 60px 20px; /* Padding around the footer */
+    height:200px;
+    
+}
+
+.footer-content {
+    margin-bottom: 50px; /* Space below content */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size */
+    margin-bottom: 50px; /* Space below content */
+    
+}
+
+footer ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    
+}
+
+footer ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Margin between links */
+}
+
+footer a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White link color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+footer a:hover {
+    color: #ffcc00; /* Change link color on hover */
+}
+
+.footer-social .social-icon:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+body, section, footer {
+    margin: 0;
+    padding: 0;
+}
+
+

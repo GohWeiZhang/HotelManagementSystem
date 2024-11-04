@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.sec {
+    background:brown;
+    padding: 20px 0;
+    /* Add some vertical padding */
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    /* Change to column layout */
+    align-items: center;
+    background: white;
+    transition: 0.5s;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Henny Penny;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* Move background color here */
+}
+
+header ul {
+    display: flex;
+    position: relative;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.usercontent {
+    margin-left: 180px;
+    padding: 20px;
+    width:800px;
+    margin-right: 180px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.userprofile-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.userprofile-info p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.userprofile-info strong {
+    display: inline-block;
+    width: 80px;
+    color: #555;
+}
+
+.userprofile-info span {
+    color: #0b0b0b;
+    font-weight: bold;
+}
+
+#editForm {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%; /* Ensure the edit form uses available width up to max-width */
+    margin: 0 auto; /* Center the form horizontally */
+    margin-top: 100px;
+}
+
+#editForm label {
+    display: block;
+    margin-bottom: 15px; /* Add margin similar to profile-info */
+    font-size: 18px; /* Match font size */
+    color: #333; /* Match text color */
+    margin-top: 10px;
+}
+
+#editForm input {
+    font-size: 18px; /* Match font size */
+    color: #0b0b0b; /* Match text color for consistency */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    box-sizing: border-box;
+}
+
+#editForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px; /* Match font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width */
+    margin-top: 50px;
+}
+
+#editForm button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#editForm:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a shadow to indicate focus */
+}
+
+#editButton {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 20px; /* Padding inside the button */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Space above the button */
+    display: inline-block; /* Make button fit its content */
+    width: 100%; 
+}
+
+#editButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#editButton:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a shadow to indicate focus */
+}
+
+#logoutButton {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 20px; /* Padding inside the button */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Space above the button */
+    display: inline-block; /* Make button fit its content */
+    width: 100%; 
+}
+
+#logoutButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#logoutButton:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a shadow to indicate focus */
+}
+
+footer {
+    background:black;
+    color: white; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 60px 20px; /* Padding around the footer */
+    height:200px;
+    
+}
+
+.footer-content {
+    margin-bottom: 50px; /* Space below content */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size */
+    margin-bottom: 50px; /* Space below content */
+    
+}
+
+footer ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    
+}
+
+footer ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Margin between links */
+}
+
+footer a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White link color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+footer a:hover {
+    color: #ffcc00; /* Change link color on hover */
+}
+
+.footer-social .social-icon:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+body, section, footer {
+    margin: 0;
+    padding: 0;
+}
+

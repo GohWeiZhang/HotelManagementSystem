@@ -1,0 +1,180 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Background color for the body */
+body {
+    background: rgb(191, 189, 189);
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar styles */
+.sidenav {
+    height: calc(100vh - 81.5px); /* Full height minus header */
+    width: 160px;
+    position: fixed;
+    top: 81.5px;
+    left: 0;
+    background-color: #2c2c2c;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 24px 16px;
+    text-decoration: none;
+    font-size: 20px; /* Adjusted for better readability */
+    color: #faf7f7;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #575757; /* Added background color on hover for better contrast */
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.content {
+    margin-left: 180px;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.profile-info strong {
+    display: inline-block;
+    width: 80px;
+    color: #555;
+}
+
+.profile-info span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+#editForm {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%; /* Ensure the edit form uses available width up to max-width */
+    margin: 0 auto; /* Center the form horizontally */
+    margin-top: 100px;
+}
+
+#editForm label {
+    display: block;
+    margin-bottom: 15px; /* Add margin similar to profile-info */
+    font-size: 18px; /* Match font size */
+    color: #333; /* Match text color */
+    margin-top: 10px;
+}
+
+#editForm input {
+    font-size: 18px; /* Match font size */
+    color: #007bff; /* Match text color for consistency */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    box-sizing: border-box;
+}
+
+#editForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px; /* Match font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width */
+    margin-top: 50px;
+}
+
+#editForm button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#editForm:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a shadow to indicate focus */
+}
+
+#editButton {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 20px; /* Padding inside the button */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Space above the button */
+    display: inline-block; /* Make button fit its content */
+    width: 100%; 
+}
+
+#editButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#editButton:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a shadow to indicate focus */
+}
+
+

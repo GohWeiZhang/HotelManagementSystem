@@ -1,0 +1,144 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Background color for the body */
+body {
+    background: rgb(191, 189, 189);
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar styles */
+.sidenav {
+    height: calc(100vh - 81.5px); /* Full height minus header */
+    width: 160px;
+    position: fixed;
+    top: 81.5px;
+    left: 0;
+    background-color: #2c2c2c;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 24px 16px;
+    text-decoration: none;
+    font-size: 20px; /* Adjusted for better readability */
+    color: #faf7f7;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #575757; /* Added background color on hover for better contrast */
+}
+
+/* Main content area */
+.main {
+    margin-left: 160px;
+    padding: 40px; /* Added padding for better spacing */
+    display: flex;
+    flex-direction: row; /* Align cards horizontally */
+    justify-content: flex-start; /* Align cards to the start */
+    align-items: flex-start; /* Align cards to the start */
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line if needed */
+    gap: 60px; /* Adjust the gap between cards as needed */
+}
+
+/* Responsive design for sidebar */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Content section styling (if you have a similar section) */
+.content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-left: 200px;
+}
+
+/* Heading styling in content */
+.content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Card styling (if necessary, adjust as needed) */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 350px; /* Fixed width to ensure cards are uniform */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: space-between;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.registered-info p {
+    font-size: large;
+}
+
+.white-container {
+    background-color: white; /* White background for the container */
+    padding: 20px; /* Padding around the chart */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-left: 200px; /* Align with other elements */
+    margin-top: 50px;
+}
+
+/* Flex container for charts */
+.chart-row {
+    display: flex; /* Use flexbox to align charts in a row */
+    justify-content: space-between; /* Space out the charts evenly */
+    margin-left: 200px; /* Align with other elements */
+    margin-top: 50px; /* Space from the cards */
+}
+
+/* Chart container styling (if needed) */
+.chart-container {
+    flex: 1; /* Allow the chart containers to take equal space */
+    margin: 0 20px; /* Add some margin between the chart containers */
+}

@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.sec {
+    background:brown;
+    padding: 20px 0;
+    /* Add some vertical padding */
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    /* Change to column layout */
+    align-items: center;
+    background: white;
+    transition: 0.5s;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Henny Penny;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* Move background color here */
+}
+
+header ul {
+    display: flex;
+    position: relative;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.AboutUs {
+    padding: 20px;
+    text-align: center;
+    /* Optional, centers the text */
+    margin-top: 120px;
+}
+
+.AboutUs h1 {
+    font-size: 80px;
+    color: rgb(247, 247, 247);
+    /* Ensure the text is visible */
+}
+
+.AboutUs h1::after {
+    content: '';
+    position: absolute;
+    width: 19%;
+    /* Adjust the width of the underline */
+    height: 4px;
+    /* Thickness of the underline */
+    background-color: rgb(241, 240, 240);
+    /* Color of the underline */
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    /* Align items at the top */
+    justify-content: space-between;
+    /* Add space between the elements */
+    padding: 40px;
+    margin-top: 100px;
+    margin-right: 700px;
+}
+
+.description {
+    width: 500px;
+    /* Control the width of the description */
+    text-align: left;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.description h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+.description p {
+    font-size: 18px;
+    font-family: Calibri, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description-image {
+    margin-left: 750px;
+    /* Adjust this value to move the image to the right */
+    position: absolute;
+    margin-top: 150px;
+}
+
+.description-image img {
+    width: 400px;
+    /* Adjust the image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+}
+
+.container1 {
+    display: flex;
+    align-items: flex-start;
+    /* Align items at the top */
+    justify-content: space-between;
+    /* Add space between the elements */
+    padding: 40px;
+    margin-top: 100px;
+    margin-right: 700px;
+}
+
+.description1 {
+    width: 500px;
+    /* Control the width of the description */
+    text-align: left;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.description1 h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: rgb(64, 114, 116);
+}
+
+.description1 p {
+    font-size: 18px;
+    font-family: Calibri, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description-image1 {
+    margin-left: 750px;
+    margin-top: 150px;
+    position: absolute;
+    margin-top: 150px;
+}
+
+.description-image1 img {
+    width: 400px;
+    /* Adjust the image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+}
+
+.container2 {
+    display: flex;
+    align-items: flex-start;
+    /* Align items at the top */
+    justify-content: space-between;
+    /* Add space between the elements */
+    padding: 40px;
+    margin-top: 100px;
+    margin-right: 700px;
+}
+
+.description2 {
+    width: 500px;
+    /* Control the width of the description */
+    text-align: left;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.description2 h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+.description2 p {
+    font-size: 18px;
+    font-family: Calibri, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description-image2 {
+    margin-left: 750px;
+    /* Adjust this value to move the image to the right */
+    margin-top: 120px;
+    position: absolute;
+}
+
+.description-image2 img {
+    width: 400px;
+    /* Adjust the image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+}
+
+.container3 {
+    display: flex;
+    align-items: flex-start;
+    /* Align items at the top */
+    justify-content: space-between;
+    /* Add space between the elements */
+    padding: 40px;
+    margin-top: 100px;
+    margin-right: 700px;
+}
+
+.description3 {
+    width: 500px;
+    /* Control the width of the description */
+    text-align: left;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.description3 h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: rgb(64, 114, 116);
+}
+
+.description3 p {
+    font-size: 18px;
+    font-family: Calibri, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description-image3 {
+    margin-left: 750px;
+    /* Adjust this value to move the image to the right */
+    margin-top: 100px;
+    position: absolute;
+}
+
+.description-image3 img {
+    width: 300px;
+    margin-left: 50px;
+
+    height: auto;
+    border-radius: 20px;
+    
+}
+
+footer {
+    background:black;
+    color: white; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 60px 20px; /* Padding around the footer */
+    height:200px;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+.footer-content {
+    margin-bottom: 50px; /* Space below content */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size */
+    margin-bottom: 50px; /* Space below content */
+    
+}
+
+footer ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    
+}
+
+footer ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Margin between links */
+}
+
+footer a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White link color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+footer a:hover {
+    color: #ffcc00; /* Change link color on hover */
+}
+
+.footer-social .social-icon:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+
+body, section, footer {
+    margin: 0;
+    padding: 0;
+}
+

@@ -1,0 +1,100 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Background color for the body */
+body {
+    background: rgb(191, 189, 189);
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: relative;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar styles */
+.sidenav {
+    height: calc(100vh - 81.5px); /* Full height minus header */
+    width: 160px;
+    position: fixed;
+    top: 81.5px;
+    left: 0;
+    background-color: #2c2c2c;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 24px 16px;
+    text-decoration: none;
+    font-size: 20px; /* Adjusted for better readability */
+    color: #faf7f7;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #575757; /* Added background color on hover for better contrast */
+}
+
+main h1 {
+    text-align: center;  /* Center the text */
+    margin: 20px 0;      /* Add vertical margin for spacing */
+}
+
+
+/* Table Styles */
+#bookingTable {
+    width: 900px; /* Keep your specific width */
+    border-collapse: collapse;
+    margin-top: 10px; /* Keep your top margin */
+    margin-left: auto;  /* Set left margin to auto */
+    margin-right: auto; /* Set right margin to auto */
+}
+
+#bookingTable th, #bookingTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#bookingTable th {
+    background-color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    #bookingTable {
+        font-size: 14px;
+    }
+}
+
+
