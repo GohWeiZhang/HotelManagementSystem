@@ -92,7 +92,6 @@ if (empty($creditCardNumber) || empty($nameOnCard) || empty($expiryDate) || empt
 $key = '1234567890123456'; // 128-bit key (16 bytes) - Ensure this is kept secure
 $encryptedCreditCardNumber = encrypt($creditCardNumber, $key);
 
-
 // Prepare and execute the query to insert booking information
 $stmt = $conn->prepare("INSERT INTO bookings (room_name, checkin_date, checkout_date, total_price, user_name, user_email, user_phone, card_number, name_on_card, expiry_date, booking_id, number_of_people) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 if ($stmt) {
