@@ -47,6 +47,21 @@ function sanitizeInput($data) {
     return htmlspecialchars(trim($data));
 }
 
+// AES-128-CTR Encryption
+function encrypt($plaintext, $key) {
+    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-128-ctr'));
+    $ciphertext = openssl_encrypt($plaintext, 'aes-128-ctr', $key, 0, $iv);
+    return base64_encode($iv . $ciphertext); // Return IV + Ciphertext
+}
+
+function decrypt($ciphertext, $key) {
+    $ciphertext = base64_decode($ciphertext);
+    $iv_length = openssl_cipher_iv_length('aes-128-ctr');
+    $iv = substr($ciphertext, 0, $iv_length);
+    $ciphertext = substr($ciphertext, $iv_length);
+    return openssl_decrypt($ciphertext, 'aes-128-ctr', $key, 0, $iv);
+}
+
 // Retrieve and sanitize form data
 $roomName = sanitizeInput($_POST['room_name'] ?? '');
 $checkinDate = sanitizeInput($_POST['checkin_date'] ?? '');
@@ -73,13 +88,15 @@ if (empty($creditCardNumber) || empty($nameOnCard) || empty($expiryDate) || empt
     exit();
 }
 
-// Mask the credit card number, keeping only the last 4 digits visible
-$maskedCreditCardNumber = str_repeat('*', strlen($creditCardNumber) - 4) . substr($creditCardNumber, -4);
+// Encrypt the credit card number
+$key = '1234567890123456'; // 128-bit key (16 bytes) - Ensure this is kept secure
+$encryptedCreditCardNumber = encrypt($creditCardNumber, $key);
+
 
 // Prepare and execute the query to insert booking information
 $stmt = $conn->prepare("INSERT INTO bookings (room_name, checkin_date, checkout_date, total_price, user_name, user_email, user_phone, card_number, name_on_card, expiry_date, booking_id, number_of_people) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 if ($stmt) {
-    $stmt->bind_param("sssssssssssd", $roomName, $checkinDate, $checkoutDate, $totalPrice, $userName, $userEmail, $userPhone, $maskedCreditCardNumber, $nameOnCard, $expiryDate, $bookingID, $numberOfPeople);
+    $stmt->bind_param("sssssssssssd", $roomName, $checkinDate, $checkoutDate, $totalPrice, $userName, $userEmail, $userPhone, $encryptedCreditCardNumber, $nameOnCard, $expiryDate, $bookingID, $numberOfPeople);
     
     if ($stmt->execute()) {
         echo json_encode(['success' => true]);
