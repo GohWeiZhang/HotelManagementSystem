@@ -25,7 +25,7 @@
 
             <div class="forgotpassword">
                 <section>
-                    <a href="adminforgetpassword.html">Forgot Password</a>
+                    <a href="adminforgetpassword.php">Forgot Password</a>
                 </section>
             </div>
 
@@ -35,7 +35,7 @@
 
             <div class="signuplink">
                 <section>
-                    <p>Don't Have An Account? <a href="adminsignup.html">Admin Sign Up</a></p>
+                    <p>Don't Have An Account? <a href="adminsignup.php">Admin Sign Up</a></p>
                 </section>
             </div>
         </form>

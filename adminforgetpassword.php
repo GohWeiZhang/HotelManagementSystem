@@ -26,7 +26,7 @@
             </div>
 
             <div class="inputsubmit">
-                <button type="button" class="submitbtn" onclick="window.location.href='adminlogin.html';">Back</button>
+                <button type="button" class="submitbtn" onclick="window.location.href='adminlogin.php';">Back</button>
             </div>
         </form>
     </div>
@@ -45,7 +45,7 @@
             .then(data => {
                 if (data.success) {
                     alert(data.success);
-                    window.location.href = 'adminlogin.html';
+                    window.location.href = 'adminlogin.php';
                 } else {
                     alert(data.error);
                 }

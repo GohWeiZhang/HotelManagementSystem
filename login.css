@@ -13,6 +13,13 @@ body{
     background: rgb(173, 219, 242);
 }
 
+.loginheader h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px; /* Adjust as needed */
+    color: #333; /* Choose a color to make it stand out */
+}
 .loginbox{
     display: flex;
     justify-content: center;

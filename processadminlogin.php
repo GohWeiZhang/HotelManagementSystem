@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Simple validation
     if (empty($email) || empty($password)) {
-        header("Location: adminlogin.html?error=emptyfields");
+        header("Location: adminlogin.php?error=emptyfields");
         exit();
     }
 
@@ -46,16 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['email'] = $email;
 
                 // Redirect to homepage after successful login
-                header("Location: adminhomepage.html");
+                header("Location: adminhomepage.php");
                 exit();
             } else {
                 // Incorrect password
-                header("Location: adminlogin.html?error=invalidpassword");
+                header("Location: adminlogin.php?error=invalidpassword");
                 exit();
             }
         } else {
             // No user found with this email
-            header("Location: adminlogin.html?error=nouser");
+            header("Location: adminlogin.php?error=nouser");
             exit();
         }
 

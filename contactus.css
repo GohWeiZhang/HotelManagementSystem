@@ -95,6 +95,7 @@ header ul li a {
 
 .ContactInfo .Management,
 .ContactInfo .Sales,
+.ContactInfo .ContactNumber,
 .ContactInfo .Location {
     margin-bottom: 20px;
     /* Space between sections */

@@ -10,17 +10,17 @@
 
 <body>
     <header>
-        <a href="adminhomepage.html" class="logo">Admin</a>
+        <a href="adminhomepage.php" class="logo">Admin</a>
     </header>
 
     <div class="sidenav">
-        <a href="adminhomepage.html">Dashboard</a>
-        <a href="adminclient.html">Clients</a>
-        <a href="adminfeedback.html">Feedback</a>
-        <a href="adminrooms.html">Rooms</a>
-        <a href="adminbooking.html">Bookings</a>
-        <a href="adminprofile.html">My Profile</a>
-        <a href="adminlogin.html">Logout</a>
+        <a href="adminhomepage.php">Dashboard</a>
+        <a href="adminclient.php">Clients</a>
+        <a href="adminfeedback.php">Feedback</a>
+        <a href="adminrooms.php">Rooms</a>
+        <a href="adminbooking.php">Bookings</a>
+        <a href="adminprofile.php">My Profile</a>
+        <a href="adminlogin.php">Logout</a>
     </div>
 
     <div class="content">

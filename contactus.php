@@ -33,6 +33,11 @@
                 <h6>This website provides a broad overview of the Dreamy Dreamer Hotel. If you would like more detailed information about our hotel, please contact us.</h6>
             </div>
 
+            <div class="ContactNumber">
+                <h6>ContactNumber</h6>
+                <p>Contact Number: +60 3-2345 6789 </p>
+            </div>
+            
             <div class="Sales">
                 <h6>Sales</h6>
                 <p>Emails: sales@dreamy.com</p>

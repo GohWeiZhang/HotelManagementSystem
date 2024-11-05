@@ -9,7 +9,8 @@
 <body>
     <div class="loginbox">
         <div class="loginheader">
-            <header>Login</header>
+          <h1> Dreamy Dreamer Hotel</h1>
+          <header>Login</header>
         </div>
 
         <form action="process_login.php" method="POST">
