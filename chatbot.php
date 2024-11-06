@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="homepage.php">Home</a></li>
                 <li><a href="aboutus.php">About Us</a></li>
-                <li><a href="chatbot.php">Facilities & Events</a></li>
+                <li><a href="facilities.php">Facilities & Events</a></li>
                 <li><a href="contactus.php">Contact Us</a></li>
                 <li><a href="rooms.php">Rooms</a></li>
                 <li><a href="account.php">Account</a></li>
