@@ -46,11 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the query and check if it was successful
     if ($stmt->execute()) {
         // Redirect to login page after successful signup
-        header("Location: adminlogin.html");
+        header("Location: adminlogin.php");
         exit();
     } else {
         // Show an alert for failure to register
-        echo "<script>alert('Failed to register. Please try again.'); window.location.href = 'adminsignup.html';</script>";
+        echo "<script>alert('Failed to register. Please try again.'); window.location.href = 'adminsignup.php';</script>";
         exit();
     }
 
