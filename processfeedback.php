@@ -19,6 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $conn->real_escape_string($_POST['title']);
     $comment = $conn->real_escape_string($_POST['comment']);
 
+    if (empty($title) || empty($comment)) {
+        header("Location: contactus.php?error=emptyfields");
+        exit();
+    }
+
     // Insert feedback into the database
     $sql = "INSERT INTO feedback (title, comment) VALUES ('$title', '$comment')";
 

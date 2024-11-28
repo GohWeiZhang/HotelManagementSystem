@@ -93,7 +93,7 @@
                     setTimeout(() => {
                         const botMessageDiv = document.createElement('div');
                         botMessageDiv.classList.add('chat-message');
-                        botMessageDiv.innerHTML = '<strong>Bot:</strong> Thank you for your inquiry!'; // Placeholder response
+                        botMessageDiv.innerHTML = '<strong>Bot:</strong> I only help with room booking, other inquries kindly go to the Hotel Inquiries chatbot at the Homepage. '; // Placeholder response
                         chatBox.appendChild(botMessageDiv);
                     }, 1000);
                 }
@@ -109,7 +109,7 @@
                     rooms.forEach(room => {
                         const roomMessageDiv = document.createElement('div');
                         roomMessageDiv.classList.add('chat-message');
-                        roomMessageDiv.innerHTML = `
+                        roomMessageDiv.innerHTML = ` 
                             <strong>Bot:</strong> 
                             <p>Room Name: ${room.name}</p>
                             <p>Price: RM ${room.price}</p>
@@ -133,7 +133,6 @@
                 <p>Price: RM ${roomPrice}</p>
                 <strong>How many people will be staying?</strong>
                 <input type="number" id="people-input" min="1" onchange="updateNumberOfPeople(this.value)">
-                <button onclick="proceedToDates()">Proceed</button>
             `;
             chatBox.appendChild(selectionMessageDiv);
         }
@@ -152,12 +151,26 @@
                 numberOfPeople = 0;
                 // Ask to go back to room selection
                 setTimeout(() => {
-                    fetchRoomDetails();
+                    fetchRoomDetails(); // Fetch room details again for the user to choose a different room
                 }, 2000);
+            } else if (numberOfPeople <= 0) {
+                const errorMessageDiv = document.createElement('div');
+                errorMessageDiv.classList.add('chat-message');
+                errorMessageDiv.innerHTML = '<strong>Bot:</strong> The number of people must be at least 1. Please enter a valid number of people.';
+                chatBox.appendChild(errorMessageDiv);
+                numberOfPeople = 0; // Reset number of people
+            } else {
+                // Proceed to the next step if number of people is valid
+                proceedToDates();
             }
         }
 
         function proceedToDates() {
+            if (selectedRoom === null || numberOfPeople <= 0) {
+                // If no room is selected or invalid number of people, do not show dates
+                return;
+            }
+
             const chatBox = document.getElementById('chat-box');
             const dateMessageDiv = document.createElement('div');
             dateMessageDiv.classList.add('chat-message');
@@ -190,7 +203,7 @@
                     // Save the dates to local storage
                     localStorage.setItem('checkInDate', checkInDate);
                     localStorage.setItem('checkOutDate', checkOutDate);
-
+                    alert('Booking confirmed! Proceeding to payment.');
                     // Proceed to payment page
                     localStorage.setItem('selectedRoom', JSON.stringify(selectedRoom));
                     localStorage.setItem('numberOfPeople', numberOfPeople);
@@ -200,18 +213,15 @@
         }
     </script>
 
-    <script src="chatbot.js"></script>
-
     <footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Dreamy Dreamer. All rights reserved.</p>
-        <ul>
-            <li><a href="https://www.jsm.gov.my/privacy-policy">Privacy Policy</a></li>
-            <li><a href="https://www.pmo.gov.my/terms-condition/">Terms of Service</a></li>
-            <li><a href="contactus.php">Sitemap</a></li>
-        </ul>
-    </div>
-
-       </footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dreamy Dreamer. All rights reserved.</p>
+            <ul>
+                <li><a href="https://www.jsm.gov.my/privacy-policy">Privacy Policy</a></li>
+                <li><a href="https://www.pmo.gov.my/terms-condition/">Terms of Service</a></li>
+                <li><a href="contactus.php">Sitemap</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

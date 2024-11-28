@@ -1,4 +1,6 @@
 <?php
+
+
 // Database connection details
 $servername = "localhost";  // Change if using a different server
 $username = "root";         // Replace with your MySQL username

@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 // Database connection settings
 $servername = "localhost";
 $username = "root";
