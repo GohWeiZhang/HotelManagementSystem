@@ -89,7 +89,10 @@ if (empty($creditCardNumber) || empty($nameOnCard) || empty($expiryDate) || empt
 }
 
 // Encrypt the credit card number
-$key = '1234567890123456'; // 128-bit key (16 bytes) - Ensure this is kept secure
+// Load the encryption key from the configuration file
+$config = require 'config.php';
+$key = $config['encryption_key']; // Access the key securely
+
 $encryptedCreditCardNumber = encrypt($creditCardNumber, $key);
 
 // Prepare and execute the query to insert booking information
